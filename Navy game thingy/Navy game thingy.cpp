@@ -18,16 +18,16 @@ bool hr_half() {
     }
 }
 void perry_main() {
-
+    cout << "\n\n올리버 해저드 페리급 호위함 USS Mcclusky를 선택하셨습니다.";
 }
 void spruance_main() {
-
+    cout << "\n\n스프루언스급 구축함 USS Fletcher를 선택하셨습니다.";
 }
 void kidd_main() {
-
+    cout << "\n\n키드급 구축함 USS Kidd를 선택하셨습니다.";
 }
 void ticonderoga_main() {
-
+    cout << "\n\n타이콘데로가급 순양함 USS Bunker Hill을 선택하셨습니다.";
 }
 void campaign_us() {
     cout << "\n당신은 미국을 선택하셨습니다. 사회주의자 놈들에게 본때를 보여줄 시간입니다.\n";
@@ -63,19 +63,19 @@ void campaign_us() {
     }
 }
 void krivak_main() {
-
+    cout << "\n\n크리박급 호위함 Revnostnyy를 선택했다.";
 }
 void udaloy_main() {
-
+    cout << "\n\n우달로이급 구축함 Severomorsk를 선택했다.";
 }
 void sovremenny_main() {
-
+    cout << "\n\n소브레멘니급 구축함 Okrylennyy를 선택했다.";
 }
 void slava_main() {
-
+    cout << "\n\n슬라바급 순양함 Slava를 선택했다.";
 }
 void kirov_main() {
-
+    cout << "\n\n키로프급 순양함 Kalinin를 선택했다.";
 }
 void campaign_su() {
     cout << "\n동무는 조국 소련을 선택했다. 자본주의 돼지들에게 본때를 보여줄 시간이다.\n";
