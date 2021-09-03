@@ -1,6 +1,4 @@
-﻿
-
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include<cstdlib>
 #include<time.h>
@@ -17,16 +15,20 @@ bool hr_half() {
     }
 }
 void perry_main() {
-    cout << "\n\n올리버 해저드 페리급 호위함 USS Mcclusky를 선택하셨습니다.";
+    cout << "\n\n올리버 해저드 페리급 호위함 USS Mcclusky를 선택하셨습니다.\n";
+    cout << "본함의 임무는 바렌츠 해에서 작전하는 니미츠급 항공모함 USS NImitz 함을 적 공격으로부터 보호하는 것입니다. 적 공격에는 적 항공기, 미사일, 잠수함, 고속정 등이 있습니다.";
 }
 void spruance_main() {
-    cout << "\n\n스프루언스급 구축함 USS Fletcher를 선택하셨습니다.";
+    cout << "\n\n스프루언스급 구축함 USS Fletcher를 선택하셨습니다.\n";
+    cout << "본함의 임무는 캄차카 반도로 상륙하는 해병대원들을 지원하는 일입니다. 해병대원들로부터 통신이 들어오면 해당 좌표에 미사일을 쏘면 됩니다. 근처에 소련 태평양 함대가 작전하므로 자함방어도 해야합니다.";
 }
 void kidd_main() {
-    cout << "\n\n키드급 구축함 USS Kidd를 선택하셨습니다.";
+    cout << "\n\n키드급 구축함 USS Kidd를 선택하셨습니다.\n";
+    cout << "본함의 임무는 지중해를 방어하는 일입니다. 지나가려는 소련 흑해함대 함선들을 격침시키고 소련 공군 항공기들을 격추시키십시오.";
 }
 void ticonderoga_main() {
-    cout << "\n\n타이콘데로가급 순양함 USS Bunker Hill을 선택하셨습니다.";
+    cout << "\n\n타이콘데로가급 순양함 USS Bunker Hill을 선택하셨습니다.\n";
+    cout<<"본함의 임무는 발트 해를 통과해 소련 발트 함대와 교전 및 칼리닌그라드로 상륙하는 해병대원들을 지원하는 임무입니다. 소련 발트함대 소속 함선들을 격침시키고 소련 공군 항공기들을 격추시키면서, 상륙하는 해병대원들을 위해 지정된 목표에 미사일을 발사하십시오."
 }
 void campaign_us() {
     cout << "\n당신은 미국을 선택하셨습니다. 사회주의자 놈들에게 본때를 보여줄 시간입니다.\n";
