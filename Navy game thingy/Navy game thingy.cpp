@@ -14,6 +14,19 @@ bool hr_half() {
         return false;
     }
 }
+bool hr_third() {
+    int hitnumber;
+    hitnumber = rand();
+    if (hitnumber % 3 == 1) {
+        return true;
+    }
+    else if (hitnumber % 3 == 2) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 void perry_main() {
     cout << "\n\n올리버 해저드 페리급 호위함 USS Mcclusky를 선택하셨습니다.\n";
     cout << "본함의 임무는 바렌츠 해에서 작전하는 니미츠급 항공모함 USS NImitz 함을 적 공격으로부터 보호하는 것입니다. 항공모함은 제해권에 큰 영향을 주므로 항공모함은 꼭 살아있어야 합니다. 항공모함에서 이륙한 함재기들의 호위를 받을 수 있습니다.";
