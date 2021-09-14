@@ -2,6 +2,7 @@
 #include <string>
 #include<cstdlib>
 #include<time.h>
+#include<windows.h>
 using namespace std;
 
 bool hr_half() {
@@ -30,6 +31,34 @@ bool hr_third() {
 void perry_main() {
     cout << "\n\n올리버 해저드 페리급 호위함 USS Mcclusky를 선택하셨습니다.\n";
     cout << "본함의 임무는 바렌츠 해에서 작전하는 니미츠급 항공모함 USS NImitz 함을 적 공격으로부터 보호하는 것입니다. 항공모함은 제해권에 큰 영향을 주므로 항공모함은 꼭 살아있어야 합니다. 항공모함에서 이륙한 함재기들의 호위를 받을 수 있습니다.";
+    Sleep(2000);
+    cout << "영국을 출발하여 노르웨이해로 이동 중입니다. 항공모함에서 정찰기 출격을 요청하시겠습니까? 적 동향을 미리 파악할 수 있지만 정찰기가 추적당해 함대의 위치를 발설할수 있습니다. 0을 입력하면 정찰기가 출격, 다른 숫자를 입력하면 출격하지 않습니다.";
+    int input;
+    cin >> input;
+    if (input == 0) {
+        cout << "RF-8C 정찰기가 USS Nimitz 함에서 발진해 적 동향을 감시합니다.";
+        bool dt1;
+        dt1 = hr_third();
+        Sleep(10000);
+        if (dt1 == true) {
+            cout << "소련 공군의 전투기에게 정찰기가 추적당했습니다. 대함 미사일이 항공모함을 향해 날아오고 있습니다. 대함 미사일을 SM-1으로 요격을 시도하시겠습니까? 0을 누르면 요격을 시도합니다.";
+            cin >> input;
+            if (input == 0) {
+                cout << "SM-1이 대함미사일을 요격합니다.";
+                Sleep(3000);
+                bool ht;
+                ht = hr_half();
+                if (ht == true) {
+                    cout << "대함미사일을 요격하는데 성공했습니다.";
+                }
+                if (ht == false) {
+                    cout << "대함미사일을 요격하는데 실패했습니다.";
+                    
+                }
+            }
+            
+        }
+    }
 }
 void spruance_main() {
     cout << "\n\n스프루언스급 구축함 USS Fletcher를 선택하셨습니다.\n";
