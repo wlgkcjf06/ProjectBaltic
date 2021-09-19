@@ -35,12 +35,13 @@ void perry_main() {
     cout << "영국을 출발하여 노르웨이해로 이동 중입니다. 항공모함에서 정찰기 출격을 요청하시겠습니까? 적 동향을 미리 파악할 수 있지만 정찰기가 추적당해 함대의 위치를 발설할수 있습니다. 0을 입력하면 정찰기가 출격, 다른 숫자를 입력하면 출격하지 않습니다.";
     int input;
     cin >> input;
+    int carrierstate = 3;
     if (input == 0) {
         cout << "RF-8C 정찰기가 USS Nimitz 함에서 발진해 적 동향을 감시합니다.";
         bool dt1;
         dt1 = hr_third();
         Sleep(10000);
-        if (dt1 == true) {
+        if (dt1 == false) {
             cout << "소련 공군의 전투기에게 정찰기가 추적당했습니다. 대함 미사일이 항공모함을 향해 날아오고 있습니다. 대함 미사일을 SM-1으로 요격을 시도하시겠습니까? 0을 누르면 요격을 시도합니다.";
             cin >> input;
             if (input == 0) {
@@ -50,15 +51,49 @@ void perry_main() {
                 ht = hr_half();
                 if (ht == true) {
                     cout << "대함미사일을 요격하는데 성공했습니다.";
+                    perry_attack1();
                 }
                 if (ht == false) {
                     cout << "대함미사일을 요격하는데 실패했습니다.";
-                    
+                    Sleep(1000);
+                    cout << "CIWS로 대함미사일을 요격하시겠습니까(0) 혹은 ECM을 사용하시겠습니까?(다른 키)";
+                    int input2;
+                    cin >> input2;
+                    if (input2 == 0) {
+                        bool ht2;
+                        ht2 = hr_third();
+                        if (ht2 == true) {
+                            cout << "CIWS가 대함미사일을 요격하는데 성공했습니다.";
+                            perry_attack1();
+                        }
+                        if (ht2 = false) {
+                            cout << "항공모함이 대함미사일에 피격되었습니다. 캐터펄트 2개가 사용 불능입니다.";
+                            carrierstate = 2;
+                            perry_defend1();
+                        }
+                    }
                 }
             }
             
         }
     }
+}
+void perry_attack1() {
+    Sleep(2000);
+    cout << "USS Nimitz 함이 제공권 확보를 위해 F-14 톰캣 전투기를 발진시킵니다.";
+    cout << "정찰기로부터 보고가 들어왔습니다. 무르만스크 북서쪽 200km 부근에 적 순양함이 포착되었습니다.";
+    cout << "지금 항공모함의 공격기를 발진시키겠습니까? 지금 발진시키면 미사일 사거리 밖에서 공격할수 있는 대신 공격기의 작전시간이 줄어듭니다. 0을 누르면 A-6 인트루더 공격기와 A-7 커세어 공격기를 발진시킵니다.";
+    int input;
+    cin >> input;
+    if (input == 0) {
+        cout << "항공모함에서 공격기가 이륙해 적 순양함을 공격합니다.";
+    }
+    else {
+        cout << "공격기의 작전시간을 늘리기 위해 순양함에 조금 더 접근해서 공격하기로 결정되었습니다.";
+    }
+}
+void perry_defend1() {
+
 }
 void spruance_main() {
     cout << "\n\n스프루언스급 구축함 USS Fletcher를 선택하셨습니다.\n";
