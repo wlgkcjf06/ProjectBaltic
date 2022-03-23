@@ -86,35 +86,33 @@ void perry_main() {
                     perry_attack1();
                 }
                 if (ht == false) {
-                    cout << "대함미사일을 요격하는데 실패했습니다.\n";
+                    cout << "항공대의 공격이 실패했습니다.\n";
                     Sleep(1000);
-                    cout << "CIWS로 대함미사일을 요격하시겠습니까(0) 혹은 ECM을 사용하시겠습니까?(다른 키)\n";
+                    cout << "하푼 미사일을 이용하여 공격하시겠습니까? 실패할경우 함대의 위치가 노출되게 됩니다.(0을 누르면 공격을 개시합니다. 다른 키를 누르면 공격하지 않습니다.)5\n";
                     int input2;
                     cin >> input2;
                     if (input2 == 0) {
+                        cout << "적 구축함에 미사일을 발사합니다.";
+                        Sleep(4000);
                         bool ht2;
                         ht2 = hr_third();
                         if (ht2 == true) {
-                            cout << "CIWS가 대함미사일을 요격하는데 성공했습니다.\n";
+                            cout << "적 구축함을 하푼 미사일을 사용해 격침시켰습니다.\n";
                             perry_attack1();
                         }
                         if (ht2 == false) {
-                            cout << "항공모함이 대함미사일에 피격되었습니다. 항공모함은 더이상 작전할수 없습니다.\n";
-                            carrierstate = 2;
-                            cout << "\n";
-                            int rt;
-                            cin >> rt;
-                            if (rt == 0) {
-                                perry_defend1();
-                            }
-                            else {
-                                perry_retreat1();
-                            }
+                            cout << "공격이 실패했습니다. 아군 함대의 위치가 노출되었습니다.\n";
+                            
                         }
                     }
                 }
             }
 
+        }
+        else{
+            Sleep(1000);
+            cout << "해협을 통해 전진합니다. \n";
+            
         }
     }
 }
