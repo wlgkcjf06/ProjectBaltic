@@ -69,7 +69,8 @@ void perry_main() {
     cout << "RF-8C 정찰기가 USS Nimitz 함에서 발진해 적 동향을 감시합니다.\n";
     bool dt1;
     int input;
-    dt1 = hr_third();
+    dt1 = hr_third;
+
     Sleep(10000);
     if (dt1 == false) {
         cout << "정찰기가 적 구축함을 발견했습니다. 0을 누르면 공격을 개시합니다. 1을 누르면 좀 더 접근합니다.\n";
@@ -106,8 +107,9 @@ void perry_main() {
                         cout << "아군 순양함이 SM-2를 이용해 미사일 요격을 시도합니다.\n";
                         bool granithit1;
                         granithit1 = hr_half;
-                        if (granithit1 = true) {
-                            cout << "아군 순양함이 미사일 2발을 격추하는 데 성공했습니다.";
+                        if (granithit1 == true) {
+                            cout << "아군 순양함이 미사일 2발을 격추하는 데 성공했습니다.\n";
+                            cout << "";
                         }
                         
                     }
