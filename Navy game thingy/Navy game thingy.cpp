@@ -11,7 +11,7 @@ bool hr_half() {
     if (hitnumber % 2 == 1) {
         return true;
     }
-    if (hitnumber % 2 == 0) {
+    else{
         return false;
     }
 }
@@ -67,6 +67,7 @@ void perry_main() {
     int carrierstate = 3;
     cout << "RF-8C 정찰기가 USS Nimitz 함에서 발진해 적 동향을 감시합니다.\n";
     bool dt1;
+    int input;
     dt1 = hr_third();
     Sleep(10000);
     if (dt1 == false) {
