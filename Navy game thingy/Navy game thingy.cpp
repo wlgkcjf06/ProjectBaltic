@@ -64,57 +64,57 @@ void perry_main() {
     cout << "\n\n올리버 해저드 페리급 호위함 USS Mcclusky를 선택하셨습니다.\n";
     cout << "본함의 임무는 USS Nimitz 함이 이끄는 항모 전단과 동행해 바렌츠 해를 통해 소련 해군의 전략적 요충지인 무르만스크를 공격하는 것입니다.\n";
     Sleep(2000);
-    cout << "영국을 출발하여 노르웨이해로 이동 중입니다. 항공모함에서 정찰기 출격을 요청하시겠습니까? 적 동향을 미리 파악할 수 있지만 정찰기가 추적당해 함대의 위치를 발설할수 있습니다. 0을 입력하면 정찰기가 출격, 다른 숫자를 입력하면 출격하지 않습니다.\n";
-    int input;
-    cin >> input;
     int carrierstate = 3;
-    if (input == 0) {
-        cout << "RF-8C 정찰기가 USS Nimitz 함에서 발진해 적 동향을 감시합니다.\n";
-        bool dt1;
-        dt1 = hr_third();
-        Sleep(10000);
-        if (dt1 == false) {
-            cout << "정찰기가 적 구축함을 발견했습니다. 0을 누르면 공격을 개시합니다. 1을 누르면 좀 더 접근합니다.\n";
-            cin >> input;
-            if (input == 0) {
-                cout << "항공모함의 함재기가 적 구축함을 공격합니다.\n";
-                Sleep(3000);
-                bool ht;
-                ht = hr_half();
-                if (ht == true) {
-                    cout << "적 구축함을 격침시키는데 성공했습니다.\n";
-                    perry_attack1();
-                }
-                if (ht == false) {
-                    cout << "항공대의 공격이 실패했습니다.\n";
-                    Sleep(1000);
-                    cout << "하푼 미사일을 이용하여 공격하시겠습니까? 실패할경우 함대의 위치가 노출되게 됩니다.(0을 누르면 공격을 개시합니다. 다른 키를 누르면 공격하지 않습니다.)5\n";
-                    int input2;
-                    cin >> input2;
-                    if (input2 == 0) {
-                        cout << "적 구축함에 미사일을 발사합니다.";
-                        Sleep(4000);
-                        bool ht2;
-                        ht2 = hr_third();
-                        if (ht2 == true) {
-                            cout << "적 구축함을 하푼 미사일을 사용해 격침시켰습니다.\n";
-                            perry_attack1();
-                        }
-                        if (ht2 == false) {
-                            cout << "공격이 실패했습니다. 아군 함대의 위치가 노출되었습니다.\n";
-                            
-                        }
+    cout << "RF-8C 정찰기가 USS Nimitz 함에서 발진해 적 동향을 감시합니다.\n";
+    bool dt1;
+    dt1 = hr_third();
+    Sleep(10000);
+    if (dt1 == false) {
+        cout << "정찰기가 적 구축함을 발견했습니다. 0을 누르면 공격을 개시합니다. 1을 누르면 좀 더 접근합니다.\n";
+        cin >> input;
+        if (input == 0) {
+            cout << "항공모함의 함재기가 적 구축함을 공격합니다.\n";
+            Sleep(3000);
+            bool ht;
+            ht = hr_half();
+            if (ht == true) {
+                cout << "적 구축함을 격침시키는데 성공했습니다.\n";
+                perry_attack1();
+            }
+            if (ht == false) {
+                cout << "항공대의 공격이 실패했습니다.\n";
+                Sleep(1000);
+                cout << "하푼 미사일을 이용하여 공격하시겠습니까? 실패할경우 함대의 위치가 노출되게 됩니다.(0을 누르면 공격을 개시합니다. 다른 키를 누르면 공격하지 않습니다.)5\n";
+                int input2;
+                cin >> input2;
+                if (input2 == 0) {
+                    cout << "적 구축함에 미사일을 발사합니다.";
+                    Sleep(4000);
+                    bool ht2;
+                    ht2 = hr_third();
+                    if (ht2 == true) {
+                        cout << "적 구축함을 하푼 미사일을 사용해 격침시켰습니다.\n";
+                        perry_attack1();
+                    }
+                    if (ht2 == false) {
+                        cout << "공격이 실패했습니다. 아군 함대의 위치가 노출되었습니다.\n";
+
                     }
                 }
-            }
+                else {
 
+                }
+            }
         }
-        else{
-            Sleep(1000);
-            cout << "해협을 통해 전진합니다. \n";
-            
-        }
+
     }
+    else {
+        Sleep(1000);
+        cout << "적 함정이 탐지되지 않앗습니다. 해협을 통해 전진합니다. \n";
+
+    }
+        
+    
 }
 void spruance_main() {
     cout << "\n\n스프루언스급 구축함 USS Fletcher를 선택하셨습니다.\n";
