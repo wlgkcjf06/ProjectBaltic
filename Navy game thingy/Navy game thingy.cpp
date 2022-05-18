@@ -106,10 +106,12 @@ void perry_main() {
                         Sleep(2000);
                         cout << "아군 순양함이 SM-2를 이용해 미사일 요격을 시도합니다.\n";
                         bool granithit1;
+                        Sleep(4000);
                         granithit1 = hr_half;
                         if (granithit1 == true) {
                             cout << "아군 순양함이 미사일 2발을 격추하는 데 성공했습니다.\n";
-                            cout << "";
+                            Sleep(2000);
+                            cout << "항공모함이 시스패로우 미사일을 이용해 대함미사일 요격을 시도합니다.\n";
                         }
                         
                     }
