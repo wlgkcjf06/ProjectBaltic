@@ -30,7 +30,6 @@ bool hr_third() {
 }
 void perry_attack1() {
     Sleep(2000);
-    cout << "USS Nimitz 함이 제공권 확보를 위해 F-14 톰캣 전투기를 발진시킵니다.\n";
     cout << "정찰기로부터 보고가 들어왔습니다. 무르만스크 북서쪽 200km 부근에 적 순양함이 포착되었습니다.\n";
     cout << "지금 항공모함의 공격기를 발진시키겠습니까? 지금 발진시키면 미사일 사거리 밖에서 공격할수 있는 대신 공격기의 작전시간이 줄어듭니다. 0을 누르면 A-6 인트루더 공격기와 A-7 커세어 공격기를 발진시킵니다.\n";
     int input;
@@ -52,6 +51,8 @@ void perry_attack1() {
     }
     else {
         cout << "공격기의 작전시간을 늘리기 위해 순양함에 조금 더 접근해서 공격하기로 결정되었습니다.\n";
+        Sleep(2000);
+        cout << "";
     }
 }
 void perry_defend1() {
@@ -102,16 +103,34 @@ void perry_main() {
                     if (ht2 == false) {
                         cout << "공격이 실패했습니다. 아군 함대의 위치가 노출되었습니다.\n";
                         Sleep(2000);
-                        cout << "아군 순양함의 레이더가 적 대함 미사일 8발을 탐지했습니다. 40초 후 착탄합니다.\n";
-                        Sleep(2000);
+                        cout << "아군 순양함의 레이더가 적 대함 미사일 8발을 탐지했습니다. 30초 후 착탄합니다.\n";
+                        Sleep(4000);
                         cout << "아군 순양함이 SM-2를 이용해 미사일 요격을 시도합니다.\n";
                         bool granithit1;
-                        Sleep(4000);
+                        Sleep(8000);
                         granithit1 = hr_half;
                         if (granithit1 == true) {
                             cout << "아군 순양함이 미사일 2발을 격추하는 데 성공했습니다.\n";
                             Sleep(2000);
                             cout << "항공모함이 시스패로우 미사일을 이용해 대함미사일 요격을 시도합니다.\n";
+                            bool granithit2;
+                            granithit2 = hr_third;
+                            Sleep(8000);
+                            if (granithit2 == true) {
+                                cout << "시스패로우 미사일이 미사일 4발을 격추했습니다.\n";
+                                
+                                cout << "채프를 발사하고 팰렁스로 나머지 대함미사일 격추를 시도합니다.\n";
+                                Sleep(4000);
+                                bool granithit3;
+                                granithit3 = hr_third;
+                                if (granithit3 == true) {
+                                    cout << "대함미사일 격추에 성공했습니다.\n";
+                                }
+                                else {
+                                    cout << "항공모함이 대함미사일 1발에 맞았습니다. 수리를 위해 모항으로 귀항하는 항모를 호위하십시오.\n";
+                                    
+                                }
+                            }
                         }
                         
                     }
@@ -142,6 +161,8 @@ void kidd_main() {
 void ticonderoga_main() {
     cout << "\n\n타이콘데로가급 순양함 USS Bunker Hill을 선택하셨습니다.\n";
     cout << "본함의 임무는 발트 해를 통과해 소련 발트 함대와 교전 및 칼리닌그라드에 설치된 지대함미사일 포대를 파괴하는 것입니다. 이 임무가 성공적으로 완수되면 해병대가 칼리닌그라드에 상륙하기 편해질 것입니다.";
+    Sleep(2000);
+
 }
 void campaign_us() {
     cout << "\n당신은 미국을 선택하셨습니다. 사회주의자 놈들에게 본때를 보여줄 시간입니다.\n";
