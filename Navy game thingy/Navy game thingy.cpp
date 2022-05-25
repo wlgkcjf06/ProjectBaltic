@@ -37,7 +37,7 @@ void perry_defend1() {
 void perry_attack1() {
     Sleep(2000);
     cout << "정찰기로부터 보고가 들어왔습니다. 무르만스크 북서쪽 200km 부근에 적 순양함이 포착되었습니다.\n";
-    cout << "지금 항공모함의 공격기를 발진시키겠습니까? 좀 더 접근하면 공격당할 가능성이 있지만 적을 격침시킬 가능성이 높아집니다..\n";
+    cout << "지금 항공모함의 공격기를 발진시키겠습니까? 좀 더 접근하면 공격당할 가능성이 있지만 적을 격침시킬 가능성이 높아집니다.\n";
     int input;
     cin >> input;
     if (input == 0) {
@@ -62,7 +62,8 @@ void perry_attack1() {
         Sleep(8000);
         bool detected1 = hr_half;
         if (detected1 == true) {
-
+            Sleep(8000);
+            cout << "적에게 탐지되었습니다. 4대의 적 항공기가 아군 함대에 대한 공습을 준비하고 있습니다. \n";
         }
         else {
 
