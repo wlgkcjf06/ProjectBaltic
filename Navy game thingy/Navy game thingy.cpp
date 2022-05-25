@@ -136,7 +136,7 @@ void perry_main() {
                                 granithit3 = hr_third;
                                 if (granithit3 == true) {
                                     cout << "대함미사일 격추에 성공했습니다.\n";
-
+                                    perry_attack1;
                                 }
                                 else {
                                     cout << "항공모함이 대함미사일 1발에 맞았습니다. 수리를 위해 모항으로 귀항하는 항모를 호위하십시오.\n";
