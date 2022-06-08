@@ -28,6 +28,26 @@ bool hr_third() {
         return false;
     }
 }
+bool rand_4() {
+    int randnumb;
+    randnumb = rand();
+    if (randnumb % 4 == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+bool rand_5() {
+    int randnumb;
+    randnumb = rand();
+    if (randnumb % 5 == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 void perry_attack2() {
 
 }
@@ -171,6 +191,12 @@ void kidd_main() {
     cout << "\n\n키드급 구축함 USS Kidd를 선택하셨습니다.\n";
     cout << "본함의 임무는 흑해로 진입해 세바스토폴에서 콘스탄차로 향하는 수송함대를 습격하는 것입니다. 길을 막는 소련 흑해함대 함선들을 격침시키고 소련 공군 항공기들을 격추시키십시오.";
 }
+void ticonderoga_attack1() {
+
+}
+void ticonderoga_retreat1() {
+
+}
 void ticonderoga_main() {
     cout << "\n\n타이콘데로가급 순양함 USS Bunker Hill을 선택하셨습니다.\n";
     cout << "본함의 임무는 발트 해를 통과해 소련 발트 함대와 교전 및 칼리닌그라드에 설치된 지대함미사일 포대를 파괴하는 것입니다. 이 임무가 성공적으로 완수되면 해병대가 칼리닌그라드에 상륙하기 편해질 것입니다.\n";
@@ -191,10 +217,69 @@ void ticonderoga_main() {
             sm2hit1 = hr_third;
             if (sm2hit1 == true) {
                 cout << "적 정찰기를 격추했습니다.\n";
+                ticonderoga_attack1;
             }
             else {
                 cout << "미사일이 빗나갔습니다.\n";
+                cout << "정찰기에게 탐지되었습니다.\n";
             }
+        }
+        else {
+            cout << "정찰기에게 탐지당하지 않게 구름 아래로 함을 숨기고 있습니다.\n";
+            Sleep(4000);
+            bool recondetect1;
+            recondetect1 = hr_third;
+            if (recondetect1 == true) {
+                cout << "정찰기에게 탐지당하지 않았습니다. 계속해서 전진합니다.\n";
+                ticonderoga_attack1;
+            }
+            else {
+                cout << "정찰기에게 탐지되었습니다.\n";
+                Sleep(5000);
+                cout << "긴급발진한 적 공격기가 대함미사일을 발사했습니다. 30초 후 착탄합니다.\n";
+                cout << "SM-2로 요격을 시도합니다.\n";
+                bool sm2hit2;
+                Sleep(6000);
+                sm2hit2 = hr_half;
+                if (sm2hit2 == true) {
+                    cout << "대함미사일 요격에 성공했습니다.\n";
+                    Sleep(1000);
+                    cout << "적 공격기가 레이더에 탐지되었습니다. 적 공격기를 요격합니다.\n";
+                    bool sm2hit3;
+                    Sleep(4000);
+                    sm2hit3 = hr_third;
+                    if (sm2hit3 == true) {
+                        cout << "적 공격기를 격추했습니다.\n";
+                        Sleep(1000);
+                        cout << "적 정찰기를 요격합니다.\n";
+                        Sleep(2000);
+                        cout << "적 정찰기를 요격하는데 성공했습니다.";
+                    }
+                }
+                else {
+                    cout << "대함미사일 요격에 실패했습니다.\n";
+                    Sleep(5000);
+                    cout << "펠렁스 CIWS를 이용해 요격을 시도합니다.\n";
+                    bool phalanxhit1;
+                    phalanxhit1 = hr_third;
+                    if (phalanxhit1 == true) {
+                        cout << "대함미사일 요격에 성공했습니다.\n";
+                    }
+                    else {
+                        cout << "대함미사일에 피격되었습니다. 주 엔진이 손상되었습니다. 피해 복구반이 함 수리를 시도하고 있습니다.\n";
+                        bool sink;
+                        sink = rand_4;
+                        if (sink == true) {
+                            cout << "피해 복구에 성공했습니다. 작전에 지장이 생겼으므로 후퇴합니다.";
+                            ticonderoga_retreat1;
+                        }
+                        else {
+                            cout << "함이 침몰했습니다.\n";
+                        }
+                    }
+                }
+            }
+
         }
     }
     
